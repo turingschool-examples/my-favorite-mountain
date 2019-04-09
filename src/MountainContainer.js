@@ -3,13 +3,19 @@ import Mountain from './Mountain';
 
 function MountainContainer(props) {
   return (
-    <section>
+    <div>
       {
         props.mountains.map(mountain => {
-          return <Mountain peakName={mountain.peakName} />
+          return (
+            <Mountain
+              myFavoriteMountain={props.myFavoriteMountain}
+              peakName={mountain.peakName}
+              setFavoriteMountain={props.setFavoriteMountain}
+            />
+          )
         })
       }
-    </section>
+    </div>
   )
 }
 
