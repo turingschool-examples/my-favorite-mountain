@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
+import MountainContainer from './MountainContainer';
 
 class App extends Component {
   constructor() {
     super();
 
-    this.state = {}
+    this.state = {mountains: [
+        {
+          peakName: 'Mt. Evans'
+        },
+        {
+          peakName: 'Long\'s Peak'
+        }
+      ]}
   }
 
   render() {
@@ -16,7 +24,7 @@ class App extends Component {
           <p>Where You Can Favorite Your Favorite Mountain</p>
         </header>
 
-        
+        <MountainContainer mountains={this.state.mountains} />
       </div>
     );
   }
