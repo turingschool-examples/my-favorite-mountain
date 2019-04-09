@@ -7,18 +7,16 @@ class App extends Component {
     super();
 
     this.state = {
-      mountains: [
-        {
-          id: 1,
-          peakName: 'Mt. Evans'
-        },
-        {
-          id: 2,
-          peakName: 'Long\'s Peak'
-        }
-      ],
+      mountains: [],
       myFavoriteMountain: null
     }
+  }
+
+  componentDidMount() {
+    fetch('https://my-mountains.herokuapp.com/api/v1/mountains')
+      .then(response => response.json())
+      .then(json => this.setState({mountains: json}))
+      .catch(err => console.error(err));
   }
 
   setFavoriteMountain = event => {
