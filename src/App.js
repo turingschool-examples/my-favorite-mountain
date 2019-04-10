@@ -27,10 +27,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div>
           <h1>My Favorite Mountain</h1>
-          <p>Where You Can Favorite Your Favorite Mountain</p>
-        </header>
+          <h3>Where You Can Favorite Your Favorite Mountain</h3>
+        </div>
 
         <MountainContainer 
           mountains={this.state.mountains}

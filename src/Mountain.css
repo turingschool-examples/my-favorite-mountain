@@ -1,0 +1,8 @@
+.Mountain {
+  margin: 10px auto 0;
+  padding: 15px;
+  max-width: 200px;
+
+  background-color: #EEE;
+  border: 1px solid #333;
+}
